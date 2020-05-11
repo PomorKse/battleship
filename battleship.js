@@ -23,9 +23,9 @@ var model = {
 	shipsSunk: 0,
 
 	ships: [
-		{ locations: [0, 0, 0], hits: ["", "", ""] },
-		{ locations: [0, 0, 0], hits: ["", "", ""] },
-		{ locations: [0, 0, 0], hits: ["", "", ""] }
+		{ locations: ["06", "16", "26"], hits: ["", "", ""] },
+		{ locations: ["24", "34", "44"], hits: ["", "", ""] },
+		{ locations: ["10", "11", "12"], hits: ["", "", ""] }
 	],
 	fire: function(guess) {
 		for (var i = 0; i < this.numShips; i++) {
@@ -55,3 +55,19 @@ var model = {
 		return true;
 	}
 };
+
+/*testing of shots. Ships are stable*/
+model.fire("53");
+model.fire("00");
+
+model.fire("06");
+model.fire("16");
+model.fire("26");
+
+model.fire("34");
+model.fire("24");
+model.fire("44");
+
+model.fire("12");
+model.fire("11");
+model.fire("10");
